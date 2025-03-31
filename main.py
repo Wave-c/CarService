@@ -6,11 +6,10 @@ API_TOKEN = '7757737885:AAHFrd0lywZyauPbK0_RZkOLVrlv6Txe0xs'
 
 async def init_bot():
     bot = Bot(token = API_TOKEN)
-    dp = Dispatcher(bot)
+    dp = Dispatcher()
     dp.include_routers(
         main_handler.router
     )
-    
     await dp.start_polling(bot)
 
 if __name__ == '__main__':
